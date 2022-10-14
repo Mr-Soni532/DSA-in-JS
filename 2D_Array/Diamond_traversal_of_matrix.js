@@ -35,7 +35,7 @@
 
 //!-------| O(n)
 function diamondTraversal(matrix) {
-    let n= matrix.length;
+    let n= matrix.length;   
     let bag = "";
     let mid = (n - 1) / 2;
     let i = mid, j = n - 1;
