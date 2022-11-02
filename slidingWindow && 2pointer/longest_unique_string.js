@@ -6,7 +6,7 @@ function cal(str){
         if(str[i] in obj){
             //shift start to the next duplicate value;
             // using max to prevent start to go back from the current position 
-            // it should always go forward.
+            // start should always move forward.
             start = Math.max(start, obj[str[i]] + 1);
         }
         obj[str[i]] = i; //updating obj
