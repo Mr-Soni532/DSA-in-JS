@@ -50,10 +50,7 @@ function countElement(n, arr) {
     while (flag) {                                         
         if (gap < 0) gap = 0;
         if (gap < 2) flag = false;
-
-        // let i = indexFlag ? 5 : 4;
         if (n == 1) i = 1;
-
         for (let j = 0; j < i; j++) { // O(1)
             index += gap + 1;
             if (arr[index] == undefined) break;
