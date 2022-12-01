@@ -47,7 +47,8 @@ function countElement(n, arr) {
     let index = 0;
     let i = 5;
     let flag = true; // Handle the while loop 
-    while (flag) {                                         
+    while (flag) {            
+        gap = gap - 2;                             
         if (gap < 0) gap = 0;
         if (gap < 2) flag = false;
         if (n == 1) i = 1;
