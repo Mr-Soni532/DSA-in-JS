@@ -42,19 +42,31 @@ class LinkedList {
             node.next = current;
             this.head = node;
         } else {
+            /*
+            prev is the previous node, jiska hme "Next" value set krna h new node se, and current yha vo value h jiski jga pe hme new node set krna h.. 
+
+            so basically jis node ke next pe current node pda tha vo node "prev" node h, ab uss prev node ke Next value me new node set kr diya h and current node ko new node ke next me set kr diya h.
+            */
             while (i < index) {
                 prev = current;
+                console.log('prev ', prev)
                 current = current.next;
+                console.log('current ', current)
                 i++
             }
             // insert at the index
             prev.next = node
-            // move to the inserted node
+            // console.log('prev.next ', prev)
+            
+            //* move to the inserted node
             prev = prev.next
-            // add the rest of the current to the inserted node
+            // console.log('prev ', prev)
+            //* add the rest of the current to the inserted node
             prev.next = current
-            //increment size
+            // console.log('prev.next ', prev.next)
+            //*increment size
             this.size++;
+            // console.log(this.head)
         }
     }
 
@@ -64,6 +76,14 @@ class LinkedList {
         var prev = null;
         while (current) {
             if (current.element == element) {
+                /*
+                prev == null means we are removing the first element of linked list. So iss time p jo bhi current hoga uska next head bn jayega.
+
+                so basically, current hmara vo node h jiko hme delete krna h.
+                pre hmara vo node h jiske next me current pda h;
+                so in case of 1st element, apne current.next ko hi head bna denge bcoz prev null hoga..
+                else apne prev ke next me current ka next node set kr denge jisse current element skip ho jayega. 
+                */
                 if (prev === null) {
                     this.head = current.next
                 } else {
@@ -95,15 +115,15 @@ class LinkedList {
 }
 
 const el = new LinkedList()
-console.log(el.isEmpty())
+// console.log(el.isEmpty())
 // console.log(el)
 el.add(2)
 // console.log(el)
-el.add(5)
-el.removeElement(5)
-el.add(6)
+el.add(3)
+// el.removeElement(5)
+el.add(4)
 el.insertAt(9, 2)
 // console.log(el)
 // console.log(el)
-el.printList()
-console.log(el.isEmpty())
+// el.printList()
+// console.log(el.isEmpty())
