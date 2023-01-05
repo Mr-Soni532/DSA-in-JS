@@ -17,8 +17,8 @@ function GCD(x, y) {
     } else {
       y = y - x;
     }
-    return x;
   }
+  return x;
 }
 
-console.log(GCD(1070, 446))
+console.log(GCD(6,21))
