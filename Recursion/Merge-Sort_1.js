@@ -3,6 +3,7 @@ function merge(arr, start, end) {
 
   let len1 = mid - start + 1;
   let len2 = end - mid;
+
   // creating 2 new arrays for storing the sorted values
   let first = new Array();
   let second = new Array();
@@ -48,7 +49,7 @@ function mergeSort(arr, start, end) {
   return merge(arr, start, end);
 }
 let arr = [3,5,6,1,4,8];
-console.log(mergeSort(nums1, 0 , nums1.length-1))
+console.log(mergeSort(arr, 0 , arr.length-1))
 
 //! Mid - 0 
 //! 
